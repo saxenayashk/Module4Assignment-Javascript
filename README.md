@@ -1,29 +1,26 @@
-# Module4Assignment-Javascript
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Module 4 Solution Starter</title>
+  <script src="SpeakHello.js"></script>
+  <script src="SpeakGoodBye.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Module 4 Solution Starter</h1>
+</body>
+</html>
+<
+(function () {
 
-(function (window) {
-// STEP 2: Wrap the entire contents of SpeakHello.js inside of an IIFE
-// See Lecture 52, part 2
+var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 
+for (var i = 0; i < names.length; i++) {
 
-// STEP 3: Create an object, called 'helloSpeaker' to which you will attach
-// the "speak" method and which you will expose to the global context
-// See Lecture 52, part 1
-var helloSpeaker = {};
-
-// DO NOT attach the speakWord variable to the 'helloSpeaker' object.
-var speakWord = "Hello";
-
-// STEP 4: Rewrite the 'speak' function such that it is attached to the
-// helloSpeaker object instead of being a standalone function.
-// See Lecture 52, part 2
-helloSpeaker.speak = function (name) {
-  console.log(speakWord + " " + name);
+  if (firstLetter === 'j') {
+    byeSpeaker.speak(names[i]);
+  } else {
+    helloSpeaker.speak(names[i]);
+  }
 }
-
-// STEP 5: Expose the 'helloSpeaker' object to the global scope. Name it
-// 'helloSpeaker' on the global scope as well.
-// See Lecture 52, part 2
-// (Note, Step 6 will be done in the SpeakGoodBye.js file.)
-window.helloSpeaker = helloSpeaker;
-
-})(window);
